@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #141414;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@layer components{
+  .secContainer{
+    @apply flex flex-col lg:flex-row
+  }
+  .subHeadSec{
+    @apply flex-1 max-w-40 lg:max-w-64 py-8 lg:py-0
+  }
+  .heading{
+      @apply text-4xl md:text-5xl lg:text-7xl font-bold md:font-normal
+  }
+
+  /* Service Section */
+  .serviceHeading{
+    @apply text-2xl sm:text-3xl md:text-5xl
+  }
+  .serviceCard{
+    @apply flex flex-col sm:flex-row rounded-3xl  overflow-hidden border-2  
+  }
+  .servFlex1{
+    @apply flex flex-col flex-1 justify-center p-4 space-y-4 md:space-y-20
+  }
+  .servFlex2{
+    @apply flex-1 flex justify-end items-end pl-5 sm:pt-5
+  }
+
+  /* contacts section */
+  .input-field{
+    @apply block w-full  border-b border-neutral-800 bg-transparent py-4 pl-6 pr-20 text-base/6 text-secondaryColor ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-secondaryColor focus:outline-none focus:ring-neutral-950/5
+  }
+
+  /* social links */
+  .btnSocial{
+    @apply  transform transition-transform duration-500 hover:scale-125 hover:text-amber-400
+  }
+  .btnSpan{
+    @apply absolute -top-14 left-1/2 transform -translate-x-1/2 z-20 px-4 py-2 text-sm font-bold text-gray-950 bg-amber-100 rounded-lg shadow-lg transition-transform duration-500 ease-in-out scale-0 group-hover:scale-100
+  }
+
+  /* Skills Icon */
+  .skillIcon{
+    @apply flex justify-center items-center w-16 h-16 bg-amber-50 p-2 rounded-xl object-cover group-hover:cursor-pointer group-hover:scale-50 transform ease-in-out duration-500
+  }
+  .skillSpan{
+    @apply absolute top-16 left-8 items-center transform -translate-x-1/2 z-20 px-4 py-2 text-sm font-bold text-gray-950 bg-amber-50 rounded-lg shadow-xl transition-transform duration-500 ease-in-out scale-0 group-hover:scale-100
+  }
+}
